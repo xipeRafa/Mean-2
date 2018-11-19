@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+//Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served
 const app = express();
 
 const { mongoose } = require('./database');
@@ -8,7 +9,7 @@ const { mongoose } = require('./database');
 app.set('port', process.env.PORT || 3000);
 
 // Middlewares
-app.use(cors({origin: 'http://localhost:4200'}));
+app.use(cors({ origin: 'http://localhost:4200' }));
 app.use(express.json());
 
 // Routes

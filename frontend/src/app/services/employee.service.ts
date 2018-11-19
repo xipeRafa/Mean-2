@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';//conectar con api
 
 import { Employee } from '../models/employee';
 
@@ -7,12 +7,14 @@ import { Employee } from '../models/employee';
   providedIn: 'root'
 })
 export class EmployeeService {
-
+  
+  //modelo de employee
   selectedEmployee: Employee;
   employees: Employee[];
   
   readonly URL_API = 'http://localhost:3000/api/employees';
 
+  //instanciar http 43
   constructor(private http: HttpClient) {
     this.selectedEmployee = new Employee();
   }
